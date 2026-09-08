@@ -58,25 +58,22 @@ Les données brutes, les bases SQLite et les fichiers CSV générés sont exclus
 
 
 
-```text
-
 bookworld\_project/
 
-│
 
-├── api.py
+api.py
 
-├── pipeline.py
+pipeline.py
 
-├── schema\_final.sql
+schema\_final.sql
 
-├── queries.sql
+queries.sql
 
-├── requirements.txt
+requirements.txt
 
-├── README.md
+README.md
 
-└── .gitignore
+.gitignore
 
 
 
