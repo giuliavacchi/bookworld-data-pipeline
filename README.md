@@ -57,23 +57,7 @@ Les données brutes, les bases SQLite et les fichiers CSV générés sont exclus
 \## 3. Structure du projet
 
 
-
-bookworld\_project/
-
-
-api.py
-
-pipeline.py
-
-schema\_final.sql
-
-queries.sql
-
-requirements.txt
-
-README.md
-
-.gitignore
+bookworld\_project : api.py, pipeline.py, schema\_final.sql, queries.sql, requirements.txt, README.md, .gitignore
 
 
 
