@@ -1,0 +1,32 @@
+# Python
+
+
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+
+# SQLite databases
+
+*.db
+
+
+# Raw data
+
+sales_raw.csv
+
+
+# Generated files
+
+sales_final_df.csv
+sales_sql_df.csv
+kpi_global.csv
+sales_by_country.csv
+sales_by_country_month.csv
+sales_by_country_channel.csv
+sales_by_country_category.csv
+sales_by_country_channel_group.csv
