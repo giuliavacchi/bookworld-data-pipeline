@@ -40,11 +40,11 @@ Le pipeline utilise plusieurs sources :
 
 
 
-\- `sales\_raw.csv` : données brutes de ventes ;
+\- sales\_raw.csv : données brutes de ventes ;
 
-\- `bookworld\_reference.db` : données de référence sur les pays, les canaux et les catégories ;
+\- bookworld\_reference.db : données de référence sur les pays, les canaux et les catégories ;
 
-\- \[Books to Scrape](https://books.toscrape.com/) : informations sur les livres et leurs catégories ;
+\- \Books to Scrape (https://books.toscrape.com/) : informations sur les livres et leurs catégories ;
 
 \- Frankfurter API : taux de change GBP → EUR.
 
