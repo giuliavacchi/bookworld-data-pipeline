@@ -44,7 +44,7 @@ Le pipeline utilise plusieurs sources :
 
 \- bookworld\_reference.db : données de référence sur les pays, les canaux et les catégories ;
 
-\- \Books to Scrape (https://books.toscrape.com/) : informations sur les livres et leurs catégories ;
+\- Books to Scrape (https://books.toscrape.com/) : informations sur les livres et leurs catégories ;
 
 \- Frankfurter API : taux de change GBP → EUR.
 
