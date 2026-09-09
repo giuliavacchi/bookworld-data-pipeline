@@ -23,7 +23,16 @@ CREATE TABLE IF NOT EXISTS sales (
     revenue_gbp REAL,
     revenue_eur REAL,
     acquisition_cost_gbp REAL,
-    acquisition_cost_eur REAL
+    acquisition_cost_eur REAL,
+
+    FOREIGN KEY (country_code)
+        REFERENCES countries(country_code),
+
+    FOREIGN KEY (channel_code)
+        REFERENCES channels(channel_code),
+
+    FOREIGN KEY (category_name)
+        REFERENCES category_rules(category_name)
 );
 
 
