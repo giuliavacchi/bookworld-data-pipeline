@@ -642,11 +642,6 @@ def load(data):
         "sales_final_df.csv", index=False
     )
 
-    data["sales_sql"].to_csv(
-        "sales_sql_df.csv", index=False
-    )
-
-
     kpi_global = pd.DataFrame([data["total_sales"]])
 
     kpi_global.to_csv(
