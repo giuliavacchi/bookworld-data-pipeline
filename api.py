@@ -23,9 +23,9 @@ def get_db_connection():
 
 @app.before_request
 def check_key():
-
-    if request.args.get("api-key") != API_KEY:
-        abort(401)
+    if request.path != "/health":
+        if request.args.get("api-key") != API_KEY:
+            abort(401)
 
 
 
