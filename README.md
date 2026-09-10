@@ -21,8 +21,8 @@ Le projet applique également le principe de minimisation des données du RGPD.
 
 Le pipeline utilise plusieurs sources :
 
-* `sales_raw.csv` : données brutes de ventes
-* `bookworld_reference.db` : données de référence sur les pays, les canaux et les catégories
+* sales_raw.csv : données brutes de ventes
+* bookworld_reference.db : données de référence sur les pays, les canaux et les catégories
 * Books to Scrape : informations sur les livres et leurs catégories
 * Frankfurter API : taux de change GBP → EUR
 
@@ -30,19 +30,19 @@ Le pipeline utilise plusieurs sources :
 
 ```text
 bookworld_project/
+├── bookworld_reference.db
+├── sales_raw.csv
 ├── pipeline.py
 ├── api.py
 ├── queries.sql
 ├── schema_final.sql
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 ├── .gitignore
-├── sales_raw.csv
-├── bookworld_reference.db
 └── bookworld_final.db
 ```
 * data/ : sales_raw.csv, bookworld_reference
-* output_pipeline/ : bookworld_final.db
+* output_pipeline/ : bookworld_final.db, fichiers CSV
 
 ### Principaux fichiers
 
@@ -147,15 +147,14 @@ Méthode : `GET`
 
 ## 10. RGPD
 
-Le fichier `sales_raw.csv` contient notamment les noms et prénoms des clients.
+Le fichier sales_raw.csv contient notamment les noms et prénoms des clients.
 
 Ces données ne sont pas nécessaires aux analyses finales. Les colonnes `customer_first_name` et `customer_last_name` ne sont donc pas utilisées dans les analyses ni dans les agrégations. Elles ne sont pas exposées par les endpoints de l'API et sont supprimées avant le stockage dans la base finale.
 
-Les fichiers générés par le pipeline restent exclus du repository via `.gitignore`.
 
 ## 11. Requêtes SQL et contrôles
 
-Le fichier `queries.sql` contient :
+Le fichier queries.sql contient :
 
 * les requêtes d'extraction des données de référence
 * une requête avec filtre sur les données actives
@@ -168,7 +167,7 @@ Les endpoints de l'API ont également été testés localement avec la clé API.
 
 Le projet est versionné avec Git et publié sur GitHub.
 
-Les fichiers nécessaires au fonctionnement et à la compréhension du projet sont versionnés dans le dépôt Git. Les fichiers générés par le pipeline restent exclus via `.gitignore`.
+Les fichiers nécessaires au fonctionnement et à la compréhension du projet sont versionnés dans le dépôt Git. Les fichiers générés par le pipeline restent exclus via .gitignore.
 
 ## 13. Checklist d'exécution rapide
 
