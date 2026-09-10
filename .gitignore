@@ -12,12 +12,8 @@ venv/
 
 # SQLite databases
 
-*.db
-
 
 # Raw data
-
-sales_raw.csv
 
 
 # Generated files
