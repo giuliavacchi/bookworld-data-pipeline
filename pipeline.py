@@ -309,10 +309,11 @@ def transform(data):
             total_acquisition_cost_eur=("acquisition_cost_eur", "sum"),
             mean_discount_rate=("discount_rate", "mean")
         )
-    )
+    ).round(2)
+
 
     sales_by_country["mean_discount_rate"] = (
-        sales_by_country["mean_discount_rate"].round(4)
+        sales_by_country["mean_discount_rate"].round(2)
     )
 
 
@@ -335,7 +336,7 @@ def transform(data):
             total_revenue_gbp=("revenue_gbp", "sum"),
             total_revenue_eur=("revenue_eur", "sum")
         )
-    )
+    ).round(2)
 
 
     # 3. Sales x category
@@ -357,7 +358,7 @@ def transform(data):
             total_revenue_eur=("revenue_eur", "sum"),
             mean_discount_rate=("discount_rate", "mean")
         )
-    )
+    ).round(2)
 
     # 4. Sales x channel
 
@@ -382,7 +383,7 @@ def transform(data):
             total_acquisition_cost_eur=("acquisition_cost_eur", "sum"),
             mean_discount_rate=("discount_rate", "mean")
         )
-    )
+    ).round(2)
     
    
 
@@ -407,7 +408,7 @@ def transform(data):
             total_acquisition_cost_eur=("acquisition_cost_eur", "sum"),
             mean_discount_rate=("discount_rate", "mean")
         )
-    )
+    ).round(2)
 
 
     # 6. Panier moyen
