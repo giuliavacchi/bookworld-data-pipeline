@@ -206,7 +206,7 @@ Exemple :
 
 
 
-http://127.0.0.1:5000/health?api-key=bookworld0897
+http://127.0.0.1:5000//sales-by-country?api-key=bookworld0897
 
 
 
