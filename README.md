@@ -182,7 +182,7 @@ Les fichiers nécessaires au fonctionnement et à la compréhension du projet so
 
     * sales_raw.csv
     * bookworld_reference.db
-  * Vérifier la configuration nécessaire au lancement de l'API
+    * schema_final.sql
 
 * [ ] **Pipeline**
 
