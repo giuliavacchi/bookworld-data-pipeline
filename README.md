@@ -88,21 +88,21 @@ Le pipeline réalise les principales étapes suivantes :
 * Calcul des revenus et des indicateurs
 * Agrégation par pays, mois, canal, catégorie et groupe de canal
 * Suppression des noms et prénoms des clients avant le stockage final
-* Création de `bookworld_final.db` et export des résultats au format CSV
+* Création de bookworld_final.db et export des résultats au format CSV
 
 ## 6. Base de données finale
 
-La base `bookworld_final.db` contient notamment :
+La base bookworld_final.db contient notamment :
 
-* `sales`
-* `countries`
-* `channels`
-* `category_rules`
-* `sales_by_country`
-* `sales_by_country_month`
-* `sales_by_country_channel`
-* `sales_by_country_category`
-* `sales_by_country_channel_group`
+* sales
+* countries
+* channels
+* category_rules
+* sales_by_country
+* sales_by_country_month
+* sales_by_country_channel
+* sales_by_country_category
+* sales_by_country_channel_group
 
 ## 7. Lancement de l'API
 
@@ -120,7 +120,7 @@ http://127.0.0.1:5000
 
 ## 8. Authentification
 
-Les endpoints d'indicateurs sont protégés par une clé API transmise dans le paramètre `api-key` de l'URL.
+Les endpoints d'indicateurs sont protégés par une clé API transmise dans le paramètre api-key de l'URL.
 
 Exemple :
 
@@ -130,26 +130,26 @@ http://127.0.0.1:5000/sales-by-country?api-key=bookworld0897
 
 Une clé absente ou incorrecte entraîne une réponse HTTP `401`.
 
-L'endpoint `/health` est accessible sans clé API afin de permettre de vérifier la disponibilité de l'API et de la base de données.
+L'endpoint /health est accessible sans clé API afin de permettre de vérifier la disponibilité de l'API et de la base de données.
 
 La clé utilisée dans ce projet est une clé de démonstration et ne constitue pas un mécanisme de sécurité adapté à une application en production.
 
 ## 9. Endpoints
 
-Méthode : `GET`
+Méthode : GET
 
-* `/health` : vérifie le fonctionnement de l'API et l'accès à la base
-* `/sales-by-country` : ventes agrégées par pays
-* `/sales-by-country-month` : ventes agrégées par pays et par mois
-* `/sales-by-country-channel` : ventes agrégées par pays et par canal
-* `/sales-by-country-category` : ventes agrégées par pays et par catégorie
-* `/sales-by-country-channel-group` : ventes agrégées par pays et par groupe de canal
+* /health : vérifie le fonctionnement de l'API et l'accès à la base
+* /sales-by-country : ventes agrégées par pays
+* /sales-by-country-month : ventes agrégées par pays et par mois
+* /sales-by-country-channel : ventes agrégées par pays et par canal
+* /sales-by-country-category : ventes agrégées par pays et par catégorie
+* /sales-by-country-channel-group : ventes agrégées par pays et par groupe de canal
 
 ## 10. RGPD
 
 Le fichier sales_raw.csv contient notamment les noms et prénoms des clients.
 
-Ces données ne sont pas nécessaires aux analyses finales. Les colonnes `customer_first_name` et `customer_last_name` ne sont donc pas utilisées dans les analyses ni dans les agrégations. Elles ne sont pas exposées par les endpoints de l'API et sont supprimées avant le stockage dans la base finale.
+Ces données ne sont pas nécessaires aux analyses finales. Les colonnes customer_first_name et customer_last_name ne sont donc pas utilisées dans les analyses ni dans les agrégations. Elles ne sont pas exposées par les endpoints de l'API et sont supprimées avant le stockage dans la base finale.
 
 
 ## 11. Requêtes SQL et contrôles
@@ -174,27 +174,27 @@ Les fichiers nécessaires au fonctionnement et à la compréhension du projet so
 * [ ] **Installation**
 
   * Créer et activer un environnement virtuel
-  * Installer les dépendances avec `requirements.txt`
+  * Installer les dépendances avec requirements.txt
 
 * [ ] **Configuration**
 
   * Vérifier la présence des fichiers sources :
 
-    * `sales_raw.csv`
-    * `bookworld_reference.db`
+    * sales_raw.csv
+    * bookworld_reference.db
   * Vérifier la configuration nécessaire au lancement de l'API
 
 * [ ] **Pipeline**
 
-  * Exécuter `pipeline.py`
-  * Vérifier la création de `bookworld_final.db` et des fichiers générés
+  * Exécuter pipeline.py
+  * Vérifier la création de bookworld_final.db et des fichiers générés
 
 * [ ] **API**
 
-  * Lancer `api.py`
+  * Lancer api.py
   * Vérifier que l'API est accessible localement
 
 * [ ] **Test des endpoints**
 
-  * Tester `/health` sans clé API
+  * Tester /health sans clé API
   * Tester les endpoints d'indicateurs avec la clé API
