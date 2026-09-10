@@ -1,5 +1,4 @@
-\# BookWorld – Data Pipeline \& REST API
-
+\# BookWorld – Data Pipeline \& REST API - Projet pédagogique de Data Analyse 
 
 
 \## 1. Présentation
@@ -50,14 +49,18 @@ Le pipeline utilise plusieurs sources :
 
 
 
-Les données brutes, les bases SQLite et les fichiers CSV générés sont exclus du versionnement Git.
-
 
 
 \## 3. Structure du projet
 
 
-bookworld\_project : api.py, pipeline.py, schema\_final.sql, queries.sql, requirements.txt, README.md, .gitignore
+bookworld\_project : pipeline.py, api.py, queries.sql, schema\_final.sql,  requirements.txt, README.md, .gitignore
+
+
+data/ : sales_raw.csv, bookworld_reference
+
+output_pipeline/ : bookworld_final.db
+
 
 
 
@@ -65,7 +68,7 @@ Principaux fichiers :
 
 
 
-\- pipeline.py : Extraction, nettoyage, enrichissement, transformation, agrégation et chargement
+\- pipeline.py : Extraction, appel API, scraping, nettoyage, enrichissement, transformation, agrégation et chargement
 
 \- api.py : API REST développée avec Flask
 
@@ -215,10 +218,6 @@ La clé utilisée dans ce projet est une clé de démonstration et ne constitue 
 
 
 
-Le dépôt GitHub est également accessible via SSH grâce à une clé SSH configurée sur le compte GitHub.
-
-
-
 \## 9. Endpoints
 
 
@@ -253,7 +252,7 @@ Ces données ne sont pas nécessaires aux analyses finales. Les colonnes `custom
 
 
 
-Le fichier brut et les fichiers locaux générés sont exclus du repository via .gitignore.
+Les fichiers locaux générés sont exclus du repository via .gitignore.
 
 
 
@@ -287,5 +286,36 @@ Le projet est versionné avec Git et publié sur GitHub.
 
 
 
-Les fichiers nécessaires au fonctionnement et à la compréhension du projet sont versionnés. Les données brutes, les bases SQLite et les fichiers générés sont exclus via .gitignore.
+Les fichiers nécessaires au fonctionnement et à la compréhension du projet sont versionnés dans le dépôt Git. Les fichiers générés par le pipeline restent exclus via .gitignore.
+
+
+## Checklist d’exécution rapide
+
+* [ ] **Installation**
+
+  * Créer et activer un environnement virtuel
+  * Installer les dépendances avec `requirements.txt`
+
+* [ ] **Configuration**
+
+  * Vérifier la présence des fichiers sources :
+
+    * `sales_raw.csv`
+    * `bookworld_reference.db`
+  * Vérifier la configuration nécessaire au lancement de l’API
+
+* [ ] **Pipeline**
+
+  * Exécuter `pipeline.py`
+  * Vérifier la création de `bookworld_final.db` et des fichiers générés
+
+* [ ] **API**
+
+  * Lancer `api.py`
+  * Vérifier que l’API est accessible localement
+
+* [ ] **Test des endpoints**
+
+  * Tester `/health`
+  * Tester les endpoints d’indicateurs avec la clé API
 
